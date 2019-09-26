@@ -36,12 +36,12 @@ class Character() {
     if (this.Attack_power >= Player2.Defense) {
       Player2.takeDamage(this.Attack_power - Player2.Defense)
       Player2.Defense = 0
+      if(Player2.Dead){
+        this.experience(Player2)
+      }
     }
     else {
       Player2.Defense -= this.Attack_power
-    }
-    if(Player2.Dead){
-      this.experience(Player2)
     }
   }
 
@@ -50,6 +50,9 @@ class Character() {
       Player2.takeDamage(this.Magic_Attack - Player2.Magic_Defense)
       Player2.Magic_Defense = 0
       this.Max_magic_points -= 100
+      if(Player2.Dead){
+        this.experience(Player2)
+      }
     }
     else if (this.Curr_magic_points <= 100) {
     }

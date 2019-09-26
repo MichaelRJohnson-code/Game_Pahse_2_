@@ -106,12 +106,12 @@ class takedamagetests extends FunSuite {
     Player1.experience(Player2)
 
     assert(Player2.Defense == 0)
-    assert(Player1.X_P == 30)
+    assert(Player1.X_P == 40)
     assert(Player2.H_P == 0)
-    assert(Player1.level == 4)
-    assert(Player1.Attack_power == 1530)
-    assert(Player1.Defense == 330)
-    assert(Player1.H_P == 31)
+    assert(Player1.level == 5)
+    assert(Player1.Attack_power == 1540)
+    assert(Player1.Defense == 340)
+    assert(Player1.H_P == 41)
   }
   ///////////////////////////////////////
 
@@ -120,7 +120,7 @@ class takedamagetests extends FunSuite {
       val Player1: Character = new Character
       val Player2: Character = new Character
 
-    Player2.Defense = 2
+    Player2.Defense = 500
     Player1.Defense = 100
     Player1.X_P = 0
     Player1.level = 1
@@ -132,8 +132,8 @@ class takedamagetests extends FunSuite {
     Player1.MagicAttack(Player2)
     Player1.experience(Player2)
 
-    assert(Player2.Defense == 0)
-    assert(Player1.X_P == 30)
+    assert(Player2.Defense == 300)
+    assert(Player1.X_P == 930)
     assert(Player1.level == 4)
     assert(Player1.Attack_power == 230)
     assert(Player1.Defense == 130)
