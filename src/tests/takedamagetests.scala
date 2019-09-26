@@ -18,8 +18,8 @@ class takedamagetests extends FunSuite {
     assert(obj2.H_P == 500)
     assert(obj3.H_P == -100)
     assert(obj4.H_P == 1000)
-    assert(obj1.Dead == true)
-    assert(obj2.Dead == false)
+    assert(obj1.Dead)
+    assert(!obj2.Dead)
   }
   test("PhysicalAttackTests") {
     val Player1: Character = new Character
@@ -93,13 +93,13 @@ class takedamagetests extends FunSuite {
     val Player2: Character = new Character
 
 
-    Player2.Defense = 300
+    Player2.Defense = 500
     Player1.Defense = 300
     Player1.X_P = 0
     Player1.level = 1
-    Player2.H_P = 1
+    Player2.H_P = 1000
     Player1.H_P = 1
-    Player1.Attack_power = 1000
+    Player1.Attack_power = 1500
 
     Player1.PhysicalAttack(Player2)
     Player1.MagicAttack(Player2)
@@ -107,16 +107,19 @@ class takedamagetests extends FunSuite {
 
     assert(Player2.Defense == 0)
     assert(Player1.X_P == 30)
+    assert(Player2.H_P == 0)
     assert(Player1.level == 4)
-    assert(Player1.Attack_power == 1030)
+    assert(Player1.Attack_power == 1530)
     assert(Player1.Defense == 330)
     assert(Player1.H_P == 31)
   }
   ///////////////////////////////////////
 
     test("LevelUpTests2"){
+
       val Player1: Character = new Character
       val Player2: Character = new Character
+
     Player2.Defense = 2
     Player1.Defense = 100
     Player1.X_P = 0
@@ -149,7 +152,9 @@ class takedamagetests extends FunSuite {
       var Character5: Character = new Character
       var Character6: Character = new Character
 
-      List.Loser =
+      //Winners.X_P =
+
+      assert()
 
 
     }
