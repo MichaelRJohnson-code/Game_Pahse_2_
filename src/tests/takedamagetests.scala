@@ -154,7 +154,7 @@ class takedamagetests extends FunSuite {
 
       //Winners.X_P =
 
-      assert()
+      //assert()
 
 
     }
