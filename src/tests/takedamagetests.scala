@@ -137,7 +137,7 @@ class takedamagetests extends FunSuite {
     assert(Player1.H_P == 31)
   }
 
-    /*test(testName = "partyTests"){
+    test(testName = "partyTests"){
 
       var winnerparty: PartyClass = new PartyClass
       var losserparty: PartyClass = new PartyClass
@@ -149,15 +149,10 @@ class takedamagetests extends FunSuite {
       var Character5: Character = new Character
       var Character6: Character = new Character
 
+      List.Loser =
 
 
-
-
-
-      //List.Loser =
-
-
-    }*/
+    }
 
 
 

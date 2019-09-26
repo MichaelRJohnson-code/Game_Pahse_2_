@@ -1,6 +1,6 @@
 package Game1
 
-class PartyClass {/*
+class PartyClass {
 
   var Character1: Character = new Character
   var Character2: Character = new Character
@@ -14,7 +14,7 @@ class PartyClass {/*
 
   def party(Losers:List[Character]): Unit = {
     for(i <- Losers){
-      teamTotalX_P += Losers(i).Defense
+      teamTotalX_P += Losers(i.Defense).Defense
     }
     for(t <- Winners){
       if(!t.Dead){
@@ -28,6 +28,6 @@ class PartyClass {/*
     }
 
   }
-*/}
+}
 
 
