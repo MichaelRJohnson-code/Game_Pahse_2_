@@ -6,10 +6,9 @@ class Character() {
   var Magic_Attack: Int = 225
   var Magic_Defense: Int = 150
   var H_P: Int = 1000
-
-  var Max_magic_points = 500
-  var Curr_magic_points: Int = Max_magic_points
-  var Dead = true
+  //var Max_magic_points: Int = 500
+  var Curr_magic_points:Int = 500
+  var Dead = false
   var X_P: Int = 0
   var level: Int = 1
 
@@ -23,20 +22,30 @@ class Character() {
     }
     if (H_P <= 0) {
       Dead = true
-
     }
     if (H_P > 0) {
       Dead = false
     }
   }
 
+  def battleOptions(Player: Character): List[String] = {
+    List().asInstanceOf[List[String]]
+  }
+
+  def takeAction(Action:String, Player2:Character): Unit = {
+    if (battleOptions(this).contains(Action))
+      {}
+
+
+  }
   //Or keep it here in the Physical Attack Method.
 
   def PhysicalAttack(Player2: Character): Unit = {
     if (this.Attack_power >= Player2.Defense) {
       Player2.takeDamage(this.Attack_power - Player2.Defense)
       Player2.Defense = 0
-      if(Player2.Dead){
+
+      if(Player2.H_P <= 0){
         this.experience(Player2)
       }
     }
@@ -49,7 +58,7 @@ class Character() {
     if (this.Magic_Attack >= Player2.Magic_Defense && this.Curr_magic_points >= 100) {
       Player2.takeDamage(this.Magic_Attack - Player2.Magic_Defense)
       Player2.Magic_Defense = 0
-      this.Max_magic_points -= 100
+      this.Curr_magic_points -= 100
       if(Player2.Dead){
         this.experience(Player2)
       }
@@ -71,6 +80,7 @@ class Character() {
 
   def reset(): Unit = {
     this.H_P = 1000
+    this.Curr_magic_points = 500
   }
 
 
@@ -91,12 +101,9 @@ class Character() {
     Magic_Attack += 10
     Magic_Defense+= 10
     H_P += 10
-    Max_magic_points += 10
+    //Max_magic_points += 10
     Curr_magic_points += 10
     X_P += 10
   }
 
 }
-
-
-
