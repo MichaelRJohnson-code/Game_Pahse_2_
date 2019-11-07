@@ -1,9 +1,8 @@
 package Game1.Controller
 import javafx.event.ActionEvent
-import View.BattleGUIDesktop
 
 
-class Buttons1(buttonpressed:String,buttonpressed2:String) extends EventHandler[ActionEvent] {
+/*class Buttons1(buttonpressed:String,buttonpressed2:String) extends EventHandler[ActionEvent] {
     override def handle(e: ActionEvent): Unit = {
 
         buttonpressed match {
@@ -46,3 +45,4 @@ class Buttons1(buttonpressed:String,buttonpressed2:String) extends EventHandler[
 
 {"name":"character2","hp":0,"maxHP":1000","battleOptions":
 ["Sword_Attack","Lunge","RollingAttack","BackStab"]}""""*/
+

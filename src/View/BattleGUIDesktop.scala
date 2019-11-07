@@ -47,6 +47,7 @@ class BattleGUIDesktop() extends EventHandler[ActionEvent] {
 
       BattleGUIDesktop.button3.text = "Warrior\n" + (parsed \ "PlayerParty" \ "name" \ "hp" ).as[Int].toString + "\n" + (parsed \ "PlayerParty" \ "Warrior" \ "maxHP").as[Int].toString+ "\n" + (parsed \ "PlayerParty" \ "Mage" \ "maxHP" \ 0).as[String].toString
 
+
       BattleGUIDesktop.button4.text = "Warrior\n" + (parsed \ "PlayerParty" \ "name" \ "hp" ).as[Int].toString + "\n" + (parsed \ "PlayerParty" \ "Warrior" \ "maxHP").as[Int].toString+ "\n" + (parsed \ "PlayerParty" \ "Mage" \ "maxHP" \ 0).as[String].toString
 
       println(jsonGameState)
